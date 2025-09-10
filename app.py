@@ -1,8 +1,13 @@
 import click
 import importlib
+import os,sys
 import pkgutil
 import commands  # This is your commands/ folder as a package
 
+# Ensure the project root is in sys.path
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 @click.group()
 def cli():
