@@ -1,13 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import textwrap
-
-def formatContent(content:str)->str:
-    sentences = content.split(". ")
-    for sentence in sentences:
-        sentence.strip()
-    sentences.pop()
-    return "".join(sentence+". " for sentence in sentences)
+from utils.misc import formatContent
 
 def fetch_season_details(season: int) -> dict:
     """

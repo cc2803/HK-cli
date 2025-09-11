@@ -11,10 +11,10 @@ def cli_command(season):
     seperator()
     try:
         details = fetch_season_details(season)
-        click.secho(f"Title: {details['title']}", fg="cyan", bold=True)
-        click.secho("Intro: ",fg="cyan",bold=True,nl=False)
+        click.secho(f"\nTitle: {details['title']}", fg="cyan", bold=True)
+        click.secho("\nIntro: ",fg="cyan",bold=True)
         click.secho(f"{details['intro']}")
-        click.secho("URL: ",fg="cyan",nl=False) 
+        click.secho("\nURL: ",fg="cyan",nl=False) 
         click.secho (f"{details['url']}")
     except Exception as e:
         click.secho(f"Error: {e}", fg="red")

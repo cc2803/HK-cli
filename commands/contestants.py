@@ -10,9 +10,10 @@ def cli_command(season):
     seperator()
     try:
         table, url = fetch_contestants(season)
-        print(f"Contestants of Season {season}:\n")
+        click.secho(f"Contestants of Season {season}:\n",fg="cyan")
         print(table)
-        print(f"\nURL: {url}")
+        click.secho("\nURL: ",fg="cyan",nl=False)
+        click.echo(f"{url}")
     except Exception as e:
         click.secho(f"Error: {e}", fg="red")
     
