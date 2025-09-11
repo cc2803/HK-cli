@@ -2,6 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import textwrap
 
+def formatContent(content:str)->str:
+    sentences = content.split(". ")
+    for sentence in sentences:
+        sentence.strip()
+    sentences.pop()
+    return "".join(sentence+". " for sentence in sentences)
 
 def fetch_season_details(season: int) -> dict:
     """
@@ -20,6 +26,7 @@ def fetch_season_details(season: int) -> dict:
     description = soup.find("meta", property="og:description")
     page_url = soup.find("meta", property="og:url")
     intro_text = description["content"] if description else "No description found."
+    intro_text = formatContent(intro_text)
     intro_text = textwrap.fill(intro_text, width=150)
 
     return {
