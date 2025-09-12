@@ -7,3 +7,6 @@ venv/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+
+#Bookmark operations during testing
+bookmarks.db
