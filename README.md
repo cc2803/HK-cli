@@ -124,8 +124,9 @@ python app.py bookmarks -view -page <page_number>
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0.
+This project is licensed under the GNU General Public License v3.0. 
 
 ---
 
-You're welcome to open a pull request or submit an issue with any constructive suggestions to help improve this project.
+You're welcome to open a pull request or submit an issue with any constructive suggestions to help improve this project. All data extracted and used in this project are from the [Hell's Kitchen Wiki | fandom](https://hellskitchen.fandom.com/wiki/Hells_Kitchen_Wiki).
+
